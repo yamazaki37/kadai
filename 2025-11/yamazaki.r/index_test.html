@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>要素の重なりや配置を試そう | コーディング力向上委員会［2025年11月17日～］</title>
+  <link rel="stylesheet" href="./css/sanitize.css">
+  <link rel="stylesheet" href="./css/style.css?ver=1.000.000">
+</head>
+<body>
+  <div class="container">
+    <div class="container-inner">
+      <header class="header gutters document">
+        <div class="header-inner">
+          <h1 class="heading"><span class="heading-inner">要素の重なりや配置を試そう</span></h1>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="main-inner">
+          <!--
+            *
+            * 全ての .rectangle（長方形）の縦横の比率は 3（高さ）: 4（横幅）で固定です。
+            * 以降、
+            * <div class="rectangle"><span class="string">1</div> ← これを「rectangle_1」
+            * <div class="rectangle"><span class="string">2</div> ← これを「rectangle_2」
+            * <div class="rectangle"><span class="string">3</div> ← これを「rectangle_3」...略
+            * と、呼称して話を進めます。
+            * ***
+            * 各 rectangleの大きさは「.pkg-inner」の横幅を 100% としたときの相対的な数値です。
+            * 各 rectangle の重なり合う部分は、参考図（./reference/ フォルダ内の PNG画像）に近いものであればOKとします。
+            * しかしながら、同フォルダ内の PDFファイルの制約については厳守してください。
+            *
+            -->
+          <div class="pkg gutters">
+            <div class="pkg-inner">
+              <h2 class="pkg-heading"><span class="heading-inner">問 1</span></h2>
+              <!--
+                *
+                * 「rectangle_1」「rectangle_2」「rectangle_3」「rectangle_4」の横幅は 40% です。
+                * 「rectangle_5」の横幅は 72% です。
+                *
+              -->
+              <ul class="item">
+                <li class="item-inner"><div class="rectangle"><span class="string">1</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">2</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">3</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">4</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">5</span></div></li>
+              </ul>
+            </div>
+            <div class="pkg-inner">
+              <h2 class="pkg-heading"><span class="heading-inner">問 2</span></h2>
+              <!--
+                *
+                * 「rectangle_1」「rectangle_2」「rectangle_3」「rectangle_4」および
+                * 「rectangle_6」「rectangle_7」「rectangle_8」「rectangle_9」の横幅は 20% です。
+                * 「rectangle_5」の横幅は 60% です。
+                *
+              -->
+              <ul class="item">
+                <li class="item-inner"><div class="rectangle"><span class="string">1</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">2</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">3</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">4</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">5</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">6</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">7</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">8</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">9</span></div></li>
+              </ul>
+            </div>
+            <div class="pkg-inner">
+              <h2 class="pkg-heading"><span class="heading-inner">問 3</span></h2>
+              <!--
+                *
+                * 「rectangle_1 ～ 5」の各横幅は、gap を 0.75em として 4分割した数値です。
+                * 「rectangle_6 ～ 15」の各横幅は、gap を 0.5em として 5分割した数値です。
+                * 「rectangle_2 ～ 4」の合計横幅（gap含む）と「rectangle_6 ～ 10」の合計横幅（gap含む）は同じです。
+                *
+              -->
+              <ul class="item">
+                <li class="item-inner"><div class="rectangle"><span class="string">1</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">2</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">3</span></div></li>
+                <li class="item-inner"><div class="rectangle"><span class="string">4</span></div></li>
+                <li class="item-inner">
+                  <div class="rectangle"><span class="string">5</span></div>
+                  <ul class="subitem">
+                    <li class="subitem-inner"><div class="rectangle"><span class="string">6</span></div></li>
+                    <li class="subitem-inner"><div class="rectangle"><span class="string">7</span></div></li>
+                    <li class="subitem-inner"><div class="rectangle"><span class="string">8</span></div></li>
+                    <li class="subitem-inner"><div class="rectangle"><span class="string">9</span></div></li>
+                    <li class="subitem-inner"><div class="rectangle"><span class="string">10</span></div></li>
+                    <li class="subitem-inner"><div class="rectangle"><span class="string">11</span></div></li>
+                    <li class="subitem-inner"><div class="rectangle"><span class="string">12</span></div></li>
+                    <li class="subitem-inner"><div class="rectangle"><span class="string">13</span></div></li>
+                    <li class="subitem-inner"><div class="rectangle"><span class="string">14</span></div></li>
+                    <li class="subitem-inner"><div class="rectangle"><span class="string">15</span></div></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer gutters">
+        <div class="foote-inner"></div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
