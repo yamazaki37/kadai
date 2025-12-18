@@ -1,0 +1,362 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDGothic&display=swap");
+
+/* *** */
+html {
+  font-size: 3.125vw;
+  @media screen and (min-width: 375px) {
+    font-size: 2.666666666vw;
+  }
+  @media screen and (min-width: 390px) {
+    font-size: 2.564102564vw;
+  }
+  @media screen and (min-width: 576px) {
+    font-size: 1.736111111vw;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1.302083333vw;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 1.008064516vw;
+    & a[href^="tel:"] {
+      pointer-events: none;
+    }
+  }
+  @media screen and (min-width: 1080px) {
+    font-size: 10px;
+  }
+}
+
+/* font */
+body {
+  font-family: "BIZ UDGothic", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-optical-sizing: auto;
+}
+body {
+  background-color: #fff;
+  color: #333;
+  font-feature-settings: "palt";
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+}
+.container {
+  font-size: 1.2em;
+  line-height: 1.75;
+  margin: 0 auto;
+  position: relative;
+  @media screen and (min-width: 375px) {
+    font-size: 1.25em;
+  }
+  @media screen and (min-width: 390px) {
+    font-size: 1.3em;
+  }
+  @media screen and (min-width: 576px) {
+    font-size: 1.35em;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1.4em;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 1.5em;
+  }
+  @media screen and (min-width: 1080px) {
+    font-size: 1.55em;
+  }
+  @media screen and (min-width: 1144px) {
+    font-size: 1.6em;
+  }
+}
+html,
+body,
+.container {
+  height: 100%;
+}
+.container-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.footer {
+  margin-top: auto;
+}
+
+/* .gutters */
+.gutters {
+  padding-right: 1em;
+  padding-left: 1em;
+  @media screen and (min-width: 576px) {
+    padding-right: 1.25em;
+    padding-left: 1.25em;
+  }
+  @media screen and (min-width: 768px) {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+  @media screen and (min-width: 992px) {
+    padding-right: 1.75em;
+    padding-left: 1.75em;
+  }
+  @media screen and (min-width: 1144px) {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+}
+.gutters > [class*="-inner"] {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.gutters.document > [class*="-inner"] {
+  max-width: 1440px;
+}
+
+/* *** */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+}
+[class*="-heading"] > .heading-inner {
+  display: inline-block;
+}
+em {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: bold;
+  font-weight: 600;
+}
+strong {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: bold;
+  font-weight: 700;
+}
+ul.style-none,
+ol.style-none {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* clearfix */
+[class*="-inner"]::after,
+.cf::after,
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* *** exclusive to this site *** */
+/* * */
+.header .heading {
+  text-align: center;
+  padding: 3em 0 1.5em;
+}
+.header .heading-inner {
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: .15em;
+  padding-left: .15em;
+}
+.nav {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 1.5em;
+  padding: 2em 0;
+}
+.nav .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+}
+.nav .list-1st {
+  justify-content: center;
+}
+.nav .list-2nd {
+  border-top: 1px solid #ddd;
+  margin: 2em 0 0;
+  padding-top: 2em;
+}
+.nav .list label {
+  display: block;
+  padding: .3em 0 .3em 1.5em;
+  position: relative;
+  cursor: pointer;
+}
+.nav .list .text-text::before,
+.nav .list .text-text::after {
+  content: "";
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: -.5em;
+  bottom: -.5em;
+}
+.nav .list-1st .text-text::before,
+.nav .list-1st .text-text::after {
+  border: 1px solid #808080;
+  border-radius: 50%;
+}
+.nav .list-1st .text-text::before {
+  width: 1.2em;
+  height: 1.2em;
+  left: 0;
+}
+.nav .list-1st .text-text::after {
+  background-color: #008080;
+  border-color: transparent;
+  width: .8em;
+  height: .8em;
+  left: .2em;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.nav .list-1st .input:checked + .text-text::after {
+  opacity: 1;
+}
+.nav .list-2nd .text-text::before {
+  border: 1px solid #808080;
+  border-radius: .1em;
+  width: 1.1em;
+  height: 1.1em;
+  left: .15em;
+}
+.nav .list-2nd .text-text::after {
+  border-right: .26em solid #008080;
+  border-bottom: .26em solid #008080;
+  width: .8em;
+  height: 1.2em;
+  bottom: .1em;
+  left: .375em;
+  opacity: 0;
+  transform: rotate(42deg);
+  transition: opacity .2s ease;
+}
+.nav .list-2nd .input:checked + .text-text::after {
+  opacity: 1;
+}
+.nav .input {
+  position: absolute;
+  opacity: 0;
+}
+.btn {
+  text-align: center;
+  padding: 3em 0 4em;
+}
+.btn .result {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: .5em 2em .6em;
+  cursor: pointer;
+  transition: opacity .2s ease;
+}
+.btn .result:hover {
+  opacity: .77;
+}
+.btn .result > span {
+  font-size: 1.25em;
+  letter-spacing: .9em;
+  display: block;
+  padding-left: .9em;
+}
+
+/* ↑↑↑ これより上の部分 ↑↑↑ は改変不可です */
+/**
+ *
+ * 「カード」が動画の挙動になるように修正してください。
+ * https://youtu.be/pg3x9OTipO0
+ *
+ * カードの各列は以下のとおりです。
+ * ［～575pxまでは、2列］
+ * ［576px～767pxまでは、3列］
+ * ［768px～991pxまでは、4列］
+ * ［992px以上は、5列］
+ *
+**/
+/* ↓↓↓ これより下の部分 ↓↓↓ を自由に加筆修正してください */
+
+.pkg {
+  padding: 3em 0 4em;
+}
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+.card-inner {
+  border: 1px solid #ccc;
+  text-align: center;
+  position: relative;
+}
+.card-header {
+  padding: 2.5em 0 .5em;
+}
+.card-body {
+  padding: 1em;
+}
+.card .zone {
+  color: #fff;
+  line-height: 1.15;
+  padding: .1em .3em .2em;
+}
+.card .kita .zone {
+  background-color: #311e49;
+}
+.card .higashi .zone {
+  background-color: #007bc6;
+}
+.card .minami .zone {
+  background-color: #c90c2b;
+}
+.card .nishi .zone {
+  background-color: #808080;
+}
+.card .zone span {
+  font-size: .8em;
+}
+.box {
+  background-color: #f2f2f2;
+  list-style-type: none;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  padding: 0;
+}
+.box .text-text {
+  font-size: .95em;
+  margin: 0;
+}
+
+
+
+
+
+
+
+/* * */
+.notfound-string {
+  font-size: 2em;
+  letter-spacing: .3em;
+  text-align: center;
+}
+
+
+
+/* *** */
