@@ -375,7 +375,11 @@ ol.style-none {
   display: block;
 }
 
-
+.container:has(input[name="region"][value="kita"]:checked)
+          :has(input[name="specialty"][value="igon"]:checked)
+.pkg .card-inner:not(.kita.igon) {
+  display: none;
+}
 
 
 /* * */
