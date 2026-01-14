@@ -304,8 +304,8 @@ ol.style-none {
 .card-inner {
   border: 1px solid #ccc;
   text-align: center;
-  width: calc((100% - (1.5em * 1)) / 2);
   position: relative;
+  width: calc((100% - (1.5em * 1)) / 2);
 }
 @media screen and (min-width: 576px) {
   .card-inner {
@@ -332,6 +332,9 @@ ol.style-none {
   color: #fff;
   line-height: 1.15;
   padding: .1em .3em .2em;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .card .kita .zone {
   background-color: #311e49;
@@ -345,11 +348,6 @@ ol.style-none {
 .card .nishi .zone {
   background-color: #808080;
 }
-.card .zone {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .card .zone span {
   font-size: .8em;
 }
@@ -359,42 +357,40 @@ ol.style-none {
   width: 100%;
   aspect-ratio: 5 / 4;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-content: center;
 }
 .box .text-text {
   font-size: .95em;
   margin: 0;
 }
-.pkg-inner .card-inner {
+.all     .card-inner.view,
+.kita    .card-inner.kita,
+.higashi .card-inner.higashi,
+.minami  .card-inner.minami,
+.nishi   .card-inner.nishi {
   display: block;
 }
-.card .card-inner {
-  display: block;
+.pkg-inner.kita .card-inner:not(.kita),
+.pkg-inner.higashi .card-inner:not(.higashi),
+.pkg-inner.minami .card-inner:not(.minami),
+.pkg-inner.nishi .card-inner:not(.nishi) {
+ display: none;
 }
-.pkg-inner.kita    .card-inner:not(.card-inner.kita),
-.pkg-inner.higashi .card-inner:not(.card-inner.higashi),
-.pkg-inner.minami  .card-inner:not(.card-inner.minami),
-.pkg-inner.nishi   .card-inner:not(.card-inner.nishi) {
-  display: none;
+.card.igon .card-inner:not(.igon),
+.card.seinen .card-inner:not(.seinen),
+.card.kaisha .card-inner:not(.kaisha),
+.card.iryo .card-inner:not(.iryo),
+.card.naiyo .card-inner:not(.naiyo),
+.card.jidan .card-inner:not(.jidan),
+.card.shako .card-inner:not(.shako),
+.card.kensetsu .card-inner:not(.kensetsu),
+.card.sanpai .card-inner:not(.sanpai),
+.card.fuzoku .card-inner:not(.fuzoku),
+.card.kobutsu .card-inner:not(.kobutsu),
+.card.jutaku .card-inner:not(.jutaku),
+.card.unso .card-inner:not(.unso) {
+ display: none;
 }
-.card.igon     .card-inner:not(.card-inner.igon),
-.card.seinen   .card-inner:not(.card-inner.seinen),
-.card.kaisha   .card-inner:not(.card-inner.kaisha),
-.card.iryo     .card-inner:not(.card-inner.iryo),
-.card.naiyo    .card-inner:not(.card-inner.naiyo),
-.card.jidan    .card-inner:not(.card-inner.jidan),
-.card.shako    .card-inner:not(.card-inner.shako),
-.card.kensetsu .card-inner:not(.card-inner.kensetsu),
-.card.sanpai   .card-inner:not(.card-inner.sanpai),
-.card.fuzoku   .card-inner:not(.card-inner.fuzoku),
-.card.kobutsu  .card-inner:not(.card-inner.kobutsu),
-.card.jutaku   .card-inner:not(.card-inner.jutaku),
-.card.unso     .card-inner:not(.card-inner.unso) {
-  display: none;
-}
-
 /* * */
 .notfound-string {
   font-size: 2em;
@@ -405,6 +401,4 @@ ol.style-none {
 .pkg.notfound .notfound-string {
   display: block;
 }
-
-
 /* *** */
